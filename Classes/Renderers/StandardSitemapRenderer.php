@@ -50,7 +50,7 @@ class StandardSitemapRenderer extends AbstractSitemapRenderer {
 	 * @see tx_ddgooglesitemap_abstract_renderer::getStartTags()
 	 */
 	public function getStartTags() {
-		return '<?xml version="1.0" encoding="UTF-8"?>' . chr(10) .
+		return '<?xml version="1.0" encoding="UTF-8"?>' . $this->additionalHeader . chr(10) .
 			'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . chr(10);
 	}
 

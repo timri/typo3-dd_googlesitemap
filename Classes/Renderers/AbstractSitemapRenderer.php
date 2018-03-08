@@ -37,6 +37,11 @@ namespace DmitryDulepov\DdGooglesitemap\Renderers;
 abstract class AbstractSitemapRenderer {
 
 	/**
+	 * @var null|string additional Prologue-data (f.e. xml-stylesheet)
+	 */
+	public $additionalHeader = null;
+
+	/**
 	 * Creates start XML tags (including XML prologue) for the sitemap.
 	 *
 	 * @return	string	Start tags

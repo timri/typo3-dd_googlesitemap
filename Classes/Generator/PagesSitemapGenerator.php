@@ -107,6 +107,9 @@ class PagesSitemapGenerator extends AbstractSitemapGenerator {
 		}
 
 		$this->renderer = GeneralUtility::makeInstance('DmitryDulepov\\DdGooglesitemap\\Renderers\\StandardSitemapRenderer');
+		$link = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::siteRelPath('dd_googlesitemap') . 'Resources/Public/sitemap.xsl';
+		$link = GeneralUtility::locationHeaderUrl($link);
+		$this->renderer->additionalHeader = '<?xml-stylesheet type="text/xsl" href="'.$link.'"?>';
 
 		// Prepare user defined objects (if any)
 		$this->hookObjects = array();
