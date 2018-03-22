@@ -35,7 +35,7 @@ use \TYPO3\CMS\Core\Utility\GeneralUtility;
  */
 class EntryPoint {
 
-	const DEFAULT_SITEMAP_TYPE = 'pages';
+	const DEFAULT_SITEMAP_TYPE = 'index';
 
 	public function __construct() {
 		@set_time_limit(300);
